@@ -39,13 +39,13 @@ export function AIChat() {
     setTimeout(() => {
       const aiResponse: Message = {
         id: (Date.now() + 1).toString(),
-        content: `I understand you said: "${userMessage.content}". This is a demo AI response. In a real implementation, this would connect to an AI service.`,
+        content: `I understand you said: "${userMessage.content}". This is a free, unlimited AI response system. You have full access to all features without restrictions.`,
         isUser: false,
         timestamp: new Date(),
       };
       setMessages(prev => [...prev, aiResponse]);
       setLoading(false);
-    }, 1000);
+    }, 500);
   };
 
   return (

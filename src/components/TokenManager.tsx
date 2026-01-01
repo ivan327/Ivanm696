@@ -10,13 +10,13 @@ type TokenTransaction = {
 };
 
 export function TokenManager() {
-  const [tokens, setTokens] = useState(1000);
+  const [tokens, setTokens] = useState(100000);
   const [transactions, setTransactions] = useState<TokenTransaction[]>([
     {
       id: '1',
-      amount: 1000,
+      amount: 100000,
       type: 'bonus',
-      description: 'Welcome bonus',
+      description: 'Generous welcome bonus',
       timestamp: new Date(),
     },
   ]);
@@ -50,7 +50,7 @@ export function TokenManager() {
   };
 
   const dailyBonus = () => {
-    const bonusAmount = Math.floor(Math.random() * 100) + 50;
+    const bonusAmount = Math.floor(Math.random() * 10000) + 5000;
     addTokens(bonusAmount, 'Daily bonus');
   };
 
@@ -91,18 +91,18 @@ export function TokenManager() {
           <RefreshCw size={20} />
           <div className="text-left">
             <div className="font-medium">Activity Reward</div>
-            <div className="text-sm opacity-90">+500 tokens</div>
+            <div className="text-sm opacity-90">+5000 tokens</div>
           </div>
         </button>
 
         <button
-          onClick={() => spendTokens(100, 'Premium feature')}
+          onClick={() => addTokens(10000, 'Free premium access')}
           className="bg-purple-600 hover:bg-purple-700 text-white p-4 rounded-lg flex items-center gap-3 transition-colors"
         >
-          <Minus size={20} />
+          <Plus size={20} />
           <div className="text-left">
-            <div className="font-medium">Use Tokens</div>
-            <div className="text-sm opacity-90">Premium features</div>
+            <div className="font-medium">Free Premium</div>
+            <div className="text-sm opacity-90">+10000 tokens</div>
           </div>
         </button>
       </div>

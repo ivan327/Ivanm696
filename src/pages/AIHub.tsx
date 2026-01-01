@@ -11,28 +11,28 @@ export function AIHub() {
       id: 'gpt-4',
       name: 'GPT-4 Turbo',
       description: 'Most capable model for complex tasks',
-      cost: 10,
+      cost: 1,
       features: ['Advanced reasoning', 'Code generation', 'Creative writing'],
     },
     {
       id: 'claude-3',
       name: 'Claude 3 Sonnet',
       description: 'Balanced performance and efficiency',
-      cost: 5,
+      cost: 1,
       features: ['Fast responses', 'Good reasoning', 'Safe outputs'],
     },
     {
       id: 'gemini-pro',
       name: 'Gemini Pro',
       description: 'Google\'s multimodal AI model',
-      cost: 8,
+      cost: 1,
       features: ['Multimodal', 'Long context', 'Code understanding'],
     },
     {
       id: 'llama-2',
       name: 'Llama 2 70B',
       description: 'Open-source large language model',
-      cost: 3,
+      cost: 1,
       features: ['Open source', 'Good performance', 'Cost effective'],
     },
   ];
@@ -68,16 +68,16 @@ export function AIHub() {
               <span className="font-semibold">Token System</span>
             </div>
             <p className="text-sm text-purple-100">
-              Fair usage with our token-based system
+              Generous token system with unlimited earning
             </p>
           </div>
           <div className="bg-white/10 rounded-lg p-4">
             <div className="flex items-center gap-2 mb-2">
               <Zap size={20} />
-              <span className="font-semibold">Fast Responses</span>
+              <span className="font-semibold">Unlimited Access</span>
             </div>
             <p className="text-sm text-purple-100">
-              Get quick and accurate AI responses
+              No restrictions, full feature access
             </p>
           </div>
         </div>

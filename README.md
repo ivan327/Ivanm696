@@ -10,7 +10,7 @@ A full-featured social platform with web application and Telegram bot integratio
 - Direct messaging between users
 - User profiles with statistics
 - AI Hub with multiple AI models
-- Token-based system for AI usage
+- Generous token system with unlimited earning
 - Advanced AI chat interface
 - Telegram bot integration
 - Real-time updates
