@@ -5,11 +5,12 @@ import { Header } from './components/Header';
 import { Feed } from './pages/Feed';
 import { Profile } from './pages/Profile';
 import { Messages } from './pages/Messages';
+import { AIHub } from './pages/AIHub';
 import { CreatePost } from './pages/CreatePost';
 
 function AppContent() {
   const { user, loading } = useAuth();
-  const [currentPage, setCurrentPage] = useState<'feed' | 'profile' | 'messages'>('feed');
+  const [currentPage, setCurrentPage] = useState<'feed' | 'profile' | 'messages' | 'ai'>('feed');
   const [showCreatePost, setShowCreatePost] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
 
@@ -41,6 +42,7 @@ function AppContent() {
         {currentPage === 'feed' && <Feed key={refreshKey} />}
         {currentPage === 'profile' && <Profile />}
         {currentPage === 'messages' && <Messages />}
+        {currentPage === 'ai' && <AIHub />}
       </main>
 
       {showCreatePost && (

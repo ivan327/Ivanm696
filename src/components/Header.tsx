@@ -1,9 +1,9 @@
 import { useAuth } from '../contexts/AuthContext';
-import { Home, User, MessageSquare, LogOut, PlusCircle } from 'lucide-react';
+import { Home, User, MessageSquare, LogOut, PlusCircle, Bot } from 'lucide-react';
 
 type HeaderProps = {
-  currentPage: 'feed' | 'profile' | 'messages';
-  onNavigate: (page: 'feed' | 'profile' | 'messages') => void;
+  currentPage: 'feed' | 'profile' | 'messages' | 'ai';
+  onNavigate: (page: 'feed' | 'profile' | 'messages' | 'ai') => void;
   onCreatePost: () => void;
 };
 
@@ -42,6 +42,18 @@ export function Header({ currentPage, onNavigate, onCreatePost }: HeaderProps) {
               >
                 <MessageSquare size={20} />
                 <span className="font-medium">Messages</span>
+              </button>
+
+              <button
+                onClick={() => onNavigate('ai')}
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+                  currentPage === 'ai'
+                    ? 'bg-purple-100 text-purple-700'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <Bot size={20} />
+                <span className="font-medium">AI Hub</span>
               </button>
 
               <button
@@ -101,6 +113,16 @@ export function Header({ currentPage, onNavigate, onCreatePost }: HeaderProps) {
           >
             <MessageSquare size={24} />
             <span className="text-xs">Messages</span>
+          </button>
+
+          <button
+            onClick={() => onNavigate('ai')}
+            className={`flex flex-col items-center gap-1 ${
+              currentPage === 'ai' ? 'text-purple-600' : 'text-slate-600'
+            }`}
+          >
+            <Bot size={24} />
+            <span className="text-xs">AI Hub</span>
           </button>
 
           <button

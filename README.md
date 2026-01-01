@@ -9,6 +9,9 @@ A full-featured social platform with web application and Telegram bot integratio
 - Like and comment on posts
 - Direct messaging between users
 - User profiles with statistics
+- AI Hub with multiple AI models
+- Token-based system for AI usage
+- Advanced AI chat interface
 - Telegram bot integration
 - Real-time updates
 
@@ -110,6 +113,7 @@ src/
 │   ├── Feed.tsx       # Main feed page
 │   ├── Profile.tsx    # User profile page
 │   ├── Messages.tsx   # Direct messaging
+│   ├── AIHub.tsx      # AI features and models
 │   └── CreatePost.tsx # Create post modal
 ├── App.tsx            # Main app component
 └── main.tsx           # App entry point
